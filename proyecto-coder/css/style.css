@@ -3,6 +3,68 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-template-areas:
+        "header header header"
+        "nav servicios aside"
+        "footer footer footer";
+
+
+}
+
+/* button */
+.button {
+    background-color: blanchedalmond;
+    color: chocolate;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* header */
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header nav a {
+
+    text-decoration: none;
+    color: black;
+}
+
+/* portada */
+
+h1 {
+    text-align: center;
+    font-size: 2.rem;
+    padding-top: 200px;
+}
+
+/* servicios */
+
+.CardServicios {
+    display: flex;
+    gap: 10px;
+}
+
+
+.card {
+    background-color: antiquewhite;
+    color: black;
+    text-decoration: none;
+    box-shadow: black(0 0 0 / 24%) 0px 3px 8px;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+    /* padding top: 40px; */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .container {
@@ -16,6 +78,7 @@ nav {
     background-color: #333;
     color: #fff;
     padding: 10px;
+    grid-area: nav;
 }
 
 nav ul {
@@ -41,21 +104,52 @@ nav ul li a {
     margin: 40px 0;
 }
 
-/* Estilos para las Cards */
-.card {
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 /* Estilos para el Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    width: 100%;
+    background-color: wheat;
+    color: black;
     text-align: center;
+    justify-content: space-evenly;
+    grid-area: footer;
+    align-items: center;
+}
+
+.footercolumns {
+    width: 400px;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+}
+
+.footerenlaces {
+    text-decoration: none
+}
+
+.box {
+    color: violet;
+}
+
+/* nosotros */
+.box {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: antiquewhite;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+.box2 {
+    margin-left: 50px;
+    margin-right: 100px;
+    padding: 30px 45px;
+    box-sizing: border-box;
 }
 
 /* Media Queries para Responsive Design */
