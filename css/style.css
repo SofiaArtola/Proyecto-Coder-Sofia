@@ -53,11 +53,29 @@ h1 {
     padding-top: 200px;
 }
 
+#portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#portada a {
+
+    text-decoration: none;
+    background-color: coral;
+    padding: 10px 20px;
+    border: 1px solid deeppink;
+    color: white;
+}
+
 /* servicios */
 
 .CardServicios {
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 
 
@@ -116,6 +134,7 @@ nav ul li a {
 
 /* Estilos para el Footer */
 footer {
+    margin-top: 50px;
     width: 100%;
     background-color: wheat;
     color: black;
@@ -126,15 +145,20 @@ footer {
 }
 
 .footercolumns {
-    width: 400px;
     justify-content: space-evenly;
     padding: 0 20px;
     margin-bottom: 50px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
 
+}
+
+.footercolumns li {
+
+    text-align: start;
+    list-style-type: none;
 }
 
 .footerenlaces {
@@ -189,4 +213,13 @@ footer {
     nav ul {
         justify-content: center;
     }
+}
+
+#img-with-button .img-with-button-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
