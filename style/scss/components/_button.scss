@@ -1,0 +1,11 @@
+%button-style {
+    background-color: blanchedalmond;
+    color: chocolate;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .button {
+    @extend %button-style;
+  }
+  

@@ -1,0 +1,40 @@
+// abstracts
+
+@import "./abstracts/variables";
+
+// components
+
+@import "./components/button";
+
+// layout
+
+@import "./layout/header";
+
+@import "./layout/hero";
+
+@import "./layout/navbar";
+
+@import "./layout/footer";
+
+// base
+
+@import "./base/reset";
+
+@import "./base/responsive";
+
+// pages
+
+@import "./pages/portada";
+
+
+// Contacto
+
+@import "./pages/contacto";
+
+// Faqs
+
+@import "./pages/faqs";
+
+// Servicios
+
+@import "./pages/servicios";

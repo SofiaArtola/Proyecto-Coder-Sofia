@@ -1,0 +1,39 @@
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+
+    /* Estilos para Mobile */
+    .container {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Estilos para Tablet */
+    .container {
+        padding: 20px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+}
+
+#img-with-button .img-with-button-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

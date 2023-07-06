@@ -1,0 +1,19 @@
+/* header */
+
+header {
+    grid-area: header;
+
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    a {
+
+        text-decoration: none;
+        color: $colorprincipal;
+    }
+}

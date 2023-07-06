@@ -41,6 +41,22 @@ header nav a {
     color: black;
 }
 
+    header {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-content img {
+        margin-right: 10px;
+    }
+
+
+
 /* portada */
 
 main {
@@ -152,6 +168,9 @@ footer {
     flex-direction: row;
     align-items: flex-start;
     text-align: center;
+    height: 100;
+
+
 
 }
 
@@ -185,6 +204,183 @@ footer {
     padding: 30px 45px;
     box-sizing: border-box;
 }
+
+
+
+/* pages */
+
+/* Contacto */ 
+
+.contacto body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+form {
+    /* Estilos para el formulario */
+}
+
+.btn-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-home:hover {
+    background-color: darkorange;
+}
+
+/* FAQS */ 
+
+
+    .accordion {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #ccc;
+        position: relative;
+    }
+
+    .accordion-header {
+        background-color: #f5f5f5;
+        padding: 10px;
+        margin: 0;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .accordion-header::before {
+        content: '\25BA';
+        position: absolute;
+        right: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .accordion-header.active::before {
+        transform: rotate(90deg);
+    }
+
+    .accordion-content {
+        padding: 10px;
+        display: none;
+    }
+
+    .accordion-item.active .accordion-content {
+        display: block;
+    }
+
+
+    .accordion-header {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #f1f1f1;
+        margin-bottom: 5px;
+    }
+
+    .accordion-content {
+        display: none;
+        padding: 10px;
+        background-color: #ffffff;
+    }
+
+    /* Servicios */ 
+
+    .card {
+        width: 200px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        margin-right: 20px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .card h2 {
+        font-size: 18px;
+        margin: 0;
+    }
+    
+    .card p {
+        margin: 10px 0;
+    }
+    
+    .card span {
+        font-weight: bold;
+    }
+    
+    .btn-vermas {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .btn-vermas:hover {
+        background-color: #555;
+    }
+    
+
+
+
 
 /* Media Queries para Responsive Design */
 @media (max-width: 768px) {

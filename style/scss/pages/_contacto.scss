@@ -1,0 +1,96 @@
+$primary-color: #333;
+$secondary-color: #fff;
+$form-width: 400px;
+$btn-color: coral;
+$btn-hover-color: darkorange;
+
+// Mixin de condicional
+@mixin btn-style($background-color) {
+    background-color: $background-color;
+    color: $secondary-color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $btn-hover-color;
+    }
+}
+
+// Estilos
+.contacto body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+}
+
+
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+form {
+    /* Estilos para el formulario */
+}
+
+.btn-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-home:hover {
+    background-color: darkorange;
+}

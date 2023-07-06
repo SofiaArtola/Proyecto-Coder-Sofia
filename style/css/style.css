@@ -1,0 +1,449 @@
+@charset "UTF-8";
+.button {
+  background-color: blanchedalmond;
+  color: chocolate;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* header */
+header {
+  grid-area: header;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+header nav ul a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Estilos para el Hero */
+.hero {
+  text-align: center;
+  margin: 40px 0;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  grid-area: nav;
+  color: #fff;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  margin-right: 20px;
+}
+nav ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 50px;
+  width: 100%;
+  background-color: wheat;
+  color: black;
+  text-align: center;
+  justify-content: space-evenly;
+  grid-area: footer;
+  align-items: center;
+}
+footer .footercolumns {
+  justify-content: space-evenly;
+  padding: 0 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: center;
+}
+footer .footercolumns li {
+  text-align: start;
+  list-style-type: none;
+}
+footer .footercolumns {
+  text-decoration: none;
+}
+footer .box {
+  color: violet;
+}
+footer .box {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: antiquewhite;
+  overflow: auto;
+  border: 1px solid black;
+}
+footer .box2 {
+  margin-left: 50px;
+  margin-right: 100px;
+  padding: 30px 45px;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header header header" "nav servicios aside" "footer footer footer";
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+  /* Estilos para Mobile */
+  .container {
+    padding: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Estilos para Tablet */
+  .container {
+    padding: 20px;
+  }
+  nav ul {
+    justify-content: center;
+  }
+}
+#img-with-button .img-with-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* portada */
+main {
+  grid-area: servicios;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 200px;
+}
+
+#portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#portada a {
+  text-decoration: none;
+  background-color: coral;
+  padding: 10px 20px;
+  border: 1px solid deeppink;
+  color: white;
+}
+#portada .bg-coral {
+  background-color: coral;
+}
+#portada .bg-teal {
+  background-color: teal;
+}
+#portada .bg-royalblue {
+  background-color: royalblue;
+}
+
+.contacto body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button[type=submit] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #555;
+}
+
+form {
+  /* Estilos para el formulario */
+}
+
+.btn-home {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: coral;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-home:hover {
+  background-color: darkorange;
+}
+
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.accordion .accordion-item:nth-child(1) {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.accordion .accordion-item:nth-child(1) .accordion-header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+.accordion .accordion-item:nth-child(1) .accordion-header::before {
+  content: "►";
+  position: absolute;
+  right: 10px;
+  transition: transform 0.3s ease;
+}
+.accordion .accordion-item:nth-child(1) .accordion-header.active::before {
+  transform: rotate(90deg);
+}
+.accordion .accordion-item:nth-child(1) .accordion-content {
+  padding: 10px;
+  display: none;
+}
+.accordion .accordion-item:nth-child(1).active .accordion-content {
+  display: block;
+}
+.accordion .accordion-item:nth-child(2) {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.accordion .accordion-item:nth-child(2) .accordion-header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+.accordion .accordion-item:nth-child(2) .accordion-header::before {
+  content: "►";
+  position: absolute;
+  right: 10px;
+  transition: transform 0.3s ease;
+}
+.accordion .accordion-item:nth-child(2) .accordion-content {
+  padding: 10px;
+  display: none;
+}
+.accordion .accordion-item:nth-child(3) {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.accordion .accordion-item:nth-child(3) .accordion-header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+.accordion .accordion-item:nth-child(3) .accordion-header::before {
+  content: "►";
+  position: absolute;
+  right: 10px;
+  transition: transform 0.3s ease;
+}
+.accordion .accordion-item:nth-child(3) .accordion-content {
+  padding: 10px;
+  display: none;
+}
+.accordion .accordion-item:nth-child(4) {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.accordion .accordion-item:nth-child(4) .accordion-header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+.accordion .accordion-item:nth-child(4) .accordion-header::before {
+  content: "►";
+  position: absolute;
+  right: 10px;
+  transition: transform 0.3s ease;
+}
+.accordion .accordion-item:nth-child(4) .accordion-content {
+  padding: 10px;
+  display: none;
+}
+
+.card {
+  width: 200px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.card h2 {
+  font-size: 18px;
+  margin: 0;
+}
+.card p {
+  margin: 10px 0;
+}
+.card span {
+  font-weight: bold;
+}
+.card.btn-vermas {
+  background-color: #f5f5f5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card {
+  width: 200px;
+  background-color: #fff;
+  padding: 20px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.card h2 {
+  font-size: 18px;
+  margin: 0;
+}
+.card p {
+  margin: 10px 0;
+}
+.card span {
+  font-weight: bold;
+}
+.card.btn-vermas {
+  background-color: #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card {
+  width: 200px;
+  background-color: #333;
+  padding: 20px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.card h2 {
+  font-size: 18px;
+  margin: 0;
+}
+.card p {
+  margin: 10px 0;
+}
+.card span {
+  font-weight: bold;
+}
+.card.btn-vermas {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.card.btn-vermas:hover {
+  background-color: #555;
+}
+
+.card {
+  width: 200px;
+  background-color: #555;
+  padding: 20px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.card h2 {
+  font-size: 18px;
+  margin: 0;
+}
+.card p {
+  margin: 10px 0;
+}
+.card span {
+  font-weight: bold;
+}
+.card.btn-vermas {
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+/* portada */
+
+$show-portada: true;
+$colors: coral, teal, royalblue;
+
+main {
+  grid-area: servicios;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.0rem;
+  padding-top: 200px;
+}
+
+#portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @if $show-portada {
+    a {
+      text-decoration: none;
+      background-color: coral;
+      padding: 10px 20px;
+      border: 1px solid deeppink;
+      color: white;
+    }
+  }
+
+  @each $color in $colors {
+    .bg-#{$color} {
+      background-color: $color;
+    }
+  }
+}
+
