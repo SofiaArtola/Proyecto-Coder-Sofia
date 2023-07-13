@@ -1,19 +1,53 @@
+/* Variables */
+$header-background-color: #d4d4d4;
+$link-color: black;
+$link-hover-color: #808080;
+$image-margin-right: 10px;
+
 /* header */
-
 header {
-    grid-area: header;
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  background-color: $header-background-color;
+  /* Cambia el color de fondo del header a un gris más oscuro */
 
-}
+  /* Nesting */
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+      /* Bucles */
+      @for $i from 1 through 3 {
+        li:nth-child(#{$i}) {
+          /* Condicionales */
+          @if $i % 2 == 0 {
+            color: red;
+          } @else {
+            color: blue;
+          }
+        }
+      }
 
-    a {
-
+      a {
         text-decoration: none;
-        color: $colorprincipal;
+        color: $link-color;
+
+        &:hover {
+          color: $link-hover-color;
+          /* Agrega un hover state gris a los enlaces de la nav */
+        }
+      }
     }
+  }
+
+  /* Nesting */
+  .header-content {
+    img {
+      margin-right: $image-margin-right;
+    }
+  }
 }

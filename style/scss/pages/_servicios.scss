@@ -1,41 +1,46 @@
+/* Variables */
+$card-bg-color: #fff;
+$card-border-radius: 10px;
+$card-padding: 20px;
+$card-margin: 20px auto;
+$card-max-width: 600px;
+$card-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$card-h2-margin-bottom: 10px;
+$card-h2-font-size: 18px;
+$card-p-margin-bottom: 10px;
+$card-p-font-size: 14px;
+$card-span-font-size: 12px;
+$btn-vermas-display: none;
 
-  @each $color in #f5f5f5, #fff, #333, #555 {
-    .card {
-      width: 200px;
-      background-color: $color;
-      padding: 20px;
-      margin-right: 20px;
-      display: inline-block;
-      vertical-align: top;
-  
-      h2 {
-        font-size: 18px;
-        margin: 0;
-      }
-  
-      p {
-        margin: 10px 0;
-      }
-  
-      span {
-        font-weight: bold;
-      }
-  
-      &.btn-vermas {
-        background-color: $color;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-  
-        @if $color == #333 {
-          &:hover {
-            background-color: #555;
-          }
-        }
-      }
-    }
+/* Estilos generales */
+h1.titulo-servicios {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card {
+  background-color: $card-bg-color;
+  border-radius: $card-border-radius;
+  padding: $card-padding;
+  margin: $card-margin;
+  max-width: $card-max-width;
+  box-shadow: $card-box-shadow;
+
+  h2 {
+    margin-bottom: $card-h2-margin-bottom;
+    font-size: $card-h2-font-size;
+  }
+
+  p {
+    margin-bottom: $card-p-margin-bottom;
+    font-size: $card-p-font-size;
+  }
+
+  span {
+    font-size: $card-span-font-size;
   }
   
-  
+  .btn-vermas {
+    display: $btn-vermas-display;
+  }
+}

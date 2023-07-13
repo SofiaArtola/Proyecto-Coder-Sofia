@@ -1,54 +1,54 @@
-// Variables
-$accordion-border-color: #ccc;
-$accordion-header-bg: #f5f5f5;
-$accordion-content-bg: #ffffff;
-$accordion-items: 4;
+/* Variables */
+$faq-list-bg-color: #f8f8f8;
+$faq-list-padding: 20px;
+$faq-list-border-radius: 5px;
+$faq-list-max-width: 800px;
+$faq-list-margin: 0 auto;
+$faq-question-font-weight: bold;
+$faq-question-font-style: italic;
+$faq-answer-font-weight: normal;
+$faq-answer-font-style: normal;
+$slideDown-animation: slideDown;
 
-// Estilos
-.accordion {
-    border: 1px solid $accordion-border-color;
-    border-radius: 4px;
+/* Estilos generales */
+main {
+  .faq-list {
+    background-color: $faq-list-bg-color;
+    padding: $faq-list-padding;
+    border-radius: $faq-list-border-radius;
+    max-width: $faq-list-max-width;
+    margin: $faq-list-margin;
 
-    @for $i from 1 through $accordion-items {
-        $accordion-header-active: if($i == 1, active, null);
+    ol {
+      counter-reset: item;
+      padding-left: 0;
 
-        .accordion-item:nth-child(#{$i}) {
-            border-bottom: 1px solid $accordion-border-color;
-            position: relative;
+      li {
+        counter-increment: item;
+        margin-bottom: 20px;
 
-            .accordion-header {
-                background-color: $accordion-header-bg;
-                padding: 10px;
-                margin: 0;
-                cursor: pointer;
-                position: relative;
-
-                &::before {
-                    content: '\25BA';
-                    position: absolute;
-                    right: 10px;
-                    transition: transform 0.3s ease;
-                }
-
-                @if $accordion-header-active {
-                    &.#{$accordion-header-active}::before {
-                        transform: rotate(90deg);
-                    }
-                }
-            }
-
-            .accordion-content {
-                padding: 10px;
-                display: none;
-            }
-
-            @if $accordion-header-active {
-                &.#{$accordion-header-active} .accordion-content {
-                    display: block;
-                }
-            }
+        .faq-question {
+          font-weight: $faq-question-font-weight;
+          font-style: $faq-question-font-style;
         }
+
+        .faq-answer {
+          font-weight: $faq-answer-font-weight;
+          font-style: $faq-answer-font-style;
+        }
+      }
     }
+  }
 }
 
+@keyframes #{$slideDown-animation} {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
 
+  100% {
+    max-height: 500px;
+    opacity: 1;
+  }
+}

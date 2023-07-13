@@ -1,57 +1,61 @@
-$footer-height: 100px;
-$show-footer-columns: true;
+/* Variables */
+$footer-margin-top: 50px;
+$footer-width: 100%;
+$footer-background-color: wheat;
+$footer-color: black;
+$footer-text-align: center;
+$footer-justify-content: space-evenly;
 
+/* Estilos para el footer */
 footer {
-  margin-top: 50px;
-  width: 100%;
-  background-color: wheat;
-  color: $colorprincipal;
-  text-align: center;
-  justify-content: space-evenly;
+  margin-top: $footer-margin-top;
+  width: $footer-width;
+  background-color: $footer-background-color;
+  color: $footer-color;
+  text-align: $footer-text-align;
+  justify-content: $footer-justify-content;
   grid-area: footer;
   align-items: center;
 
-  @if $show-footer-columns == true {
-    .footercolumns {
-      justify-content: space-evenly;
-      padding: 0 20px;
-      margin-bottom: 50px;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      text-align: center;
+  /* Nesting */
+  .footercolumns {
+    justify-content: space-evenly;
+    padding: 0 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
 
-      li {
+    /* Bucles */
+    @for $i from 1 through 3 {
+      li:nth-child(#{$i}) {
         text-align: start;
         list-style-type: none;
       }
     }
+
+    /* Nesting */
+    a {
+      text-decoration: none;
+    }
   }
 
-  .footercolumns {
-    text-decoration: none;
-  }
-
+  /* Nesting */
   .box {
     color: violet;
-  }
-
-  .box {
     display: inline-block;
     width: 150px;
     height: 150px;
     background-color: antiquewhite;
     overflow: auto;
-    border: 1px solid $colorprincipal;
+    border: 1px solid black;
   }
 
   .box2 {
-    @if $footer-height > 80px {
-      margin-left: 50px;
-      margin-right: 100px;
-      padding: 30px 45px;
-      box-sizing: border-box;
-    }
+    margin-left: 50px;
+    margin-right: 100px;
+    padding: 30px 45px;
+    box-sizing: border-box;
   }
 }
-

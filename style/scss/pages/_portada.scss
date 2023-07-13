@@ -1,38 +1,95 @@
+/* Variables */
+$primary-color: coral;
+$secondary-color: deeppink;
+$card-background: #f8f8f8;
+$card-border-color: #f2f2f2;
+$card-text-color: #444444;
+$card-button-color: #ffa54c;
+$card-button-hover-color: #ffca7b;
+$box-shadow: 2px 2px 4px #888888;
+
 /* portada */
-
-$show-portada: true;
-$colors: coral, teal, royalblue;
-
 main {
   grid-area: servicios;
-}
 
-h1 {
-  text-align: center;
-  font-size: 2.0rem;
-  padding-top: 200px;
-}
+  /* Nesting */
+  #portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-#portada {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @if $show-portada {
     a {
       text-decoration: none;
-      background-color: coral;
+      background-color: $primary-color;
       padding: 10px 20px;
-      border: 1px solid deeppink;
+      border: 1px solid $secondary-color;
       color: white;
     }
   }
+}
 
-  @each $color in $colors {
-    .bg-#{$color} {
-      background-color: $color;
+/* header */
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  background-color: #d4d4d4;
+
+  /* Nesting */
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          color: #808080;
+        }
+      }
+    }
+  }
+
+  .header-content {
+    img {
+      margin-right: 10px;
     }
   }
 }
 
+/* CardServicios */
+.CardServicios {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  /* Nesting */
+  .card {
+    border: 1px solid $card-border-color;
+    background-color: $card-background;
+    text-align: center;
+    padding: 20px;
+    box-shadow: $box-shadow;
+
+    h3 {
+      color: $card-text-color;
+    }
+
+    a {
+      text-decoration: none;
+      background-color: $card-button-color;
+      padding: 10px 20px;
+      border: none;
+      color: #ffffff;
+
+      &:hover {
+        background-color: $card-button-hover-color;
+      }
+    }
+  }
+}

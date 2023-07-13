@@ -1,36 +1,37 @@
+/* Variables */
+$nav-background: #333;
+$nav-color: #fff;
+$nav-padding: 10px;
+$nav-li-margin: 20px;
 
-$show-nav: true;
-$dark-mode: true;
-
+/* Estilos para el Mega Nav */
 nav {
-  background-color: #333;
-  padding: 10px;
+  background-color: $nav-background;
+  color: $nav-color;
+  padding: $nav-padding;
   grid-area: nav;
 
-  @if $show-nav {
-    @if $dark-mode {
-      color: #fff;
-    } @else {
-      color: #000;
-    }
+  /* Nesting */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
 
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: space-between;
-
-      li {
-        margin-right: 20px;
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
+    /* Bucles */
+    @for $i from 1 through 5 {
+      li:nth-child(#{$i}) {
+        margin-right: $nav-li-margin * $i;
       }
     }
-  } @else {
-    display: none;
+
+    /* Nesting */
+    li {
+      a {
+        color: $nav-color;
+        text-decoration: none;
+      }
+    }
   }
 }
-

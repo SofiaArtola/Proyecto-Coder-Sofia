@@ -1,0 +1,20 @@
+/* Variables */
+$body-bg-color: #f2f2f2;
+$body-color: #000;
+$body-text-align: center;
+$body-padding: 20px;
+
+/* Estilos para la página de Sobre Nosotros */
+.sobrenosotros {
+  body {
+    background-color: $body-bg-color;
+    color: $body-color;
+    text-align: $body-text-align;
+    padding: $body-padding;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
